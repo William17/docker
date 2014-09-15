@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM dockerfile/ubuntu
 MAINTAINER William Leung<superbill2012@qq.com>
 RUN \
   add-apt-repository -y ppa:nginx/stable && \
