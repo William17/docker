@@ -5,7 +5,8 @@ RUN \
   apt-get update && \
   apt-get install -y nginx && \
   rm -rf /var/lib/apt/lists/* && \
-  chown -R www-data:www-data /var/lib/nginx
+  chown -R www-data:www-data /var/lib/nginx && \
+  mkdir /data
 
 # Define mountable directories.
 VOLUME ["/data","/etc/nginx/nginx.conf"]
