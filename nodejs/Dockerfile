@@ -1,4 +1,4 @@
-FROM william17/ubuntu:latest
+FROM william17/debian:latest
 MAINTAINER William Leung<superbill2012@qq.com>
 ENV PATH $PATH:/opt/nodejs/bin
 ENV VERSION v0.10.31

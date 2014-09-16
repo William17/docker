@@ -1,19 +1,16 @@
-FROM william17/ubuntu:latest
+FROM william17/debian:latest
 MAINTAINER William Leung<superbill2012@qq.com>
 RUN \
-  add-apt-repository -y ppa:nginx/stable && \
+  RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62 && \
+  RUN echo "deb http://www.nginx.org/packages/debian/ wheezy nginx" > /etc/apt/sources.list.d/nginx.list && \
   apt-get update && \
   apt-get install -y nginx && \
-  rm -rf /var/lib/apt/lists/* && \
   echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
   chown -R www-data:www-data /var/lib/nginx && \
   mkdir /app 
 
 # Define mountable directories.
 VOLUME ["/app","/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx"]
-
-# Define working directory.
-WORKDIR /etc/nginx
 
 # Define default command.
 CMD ["nginx"]
