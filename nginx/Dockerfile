@@ -1,4 +1,4 @@
-FROM dockerfile/ubuntu
+FROM william17/ubuntu:latest
 MAINTAINER William Leung<superbill2012@qq.com>
 RUN \
   add-apt-repository -y ppa:nginx/stable && \
