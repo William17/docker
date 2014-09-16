@@ -8,8 +8,9 @@ RUN \
 
 RUN \
 	apt-get update && \
-	apt-get install -y gcc make && \
-
+	apt-get install -y gcc make
+	
+RUN \
 	wget http://www.imagemagick.org/download/ImageMagick.tar.gz | tar --strip-components=1 -xz && \
 	cd $(ls | grep "ImageMagick-") && \
 	./configure && make && make install && \
