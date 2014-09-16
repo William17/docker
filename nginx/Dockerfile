@@ -6,7 +6,6 @@ RUN \
   apt-get update && \
   apt-get install -y nginx && \
   echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
-  chown -R www-data:www-data /var/lib/nginx && \
   mkdir /app 
 
 # Define mountable directories.
