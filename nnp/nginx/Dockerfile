@@ -1,4 +1,4 @@
-FROM william17/debian:latest
+FROM william17/nnp_php:latest
 MAINTAINER William Leung<superbill2012@qq.com>
 RUN \
   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62 && \
