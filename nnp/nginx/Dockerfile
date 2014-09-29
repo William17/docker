@@ -9,11 +9,8 @@ RUN \
   mkdir /app 
 
 # Define mountable directories.
-VOLUME ["/app","/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx"]
+VOLUME ["/app","/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d"]
 
 # Expose ports
 EXPOSE 80
 EXPOSE 443
-
-# Define default command.
-CMD ["nginx"]
