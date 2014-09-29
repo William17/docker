@@ -1,4 +1,4 @@
-FROM william17/nnp_nginx:latest
+FROM william17/nodejs-php-nginx:latest
 MAINTAINER William Leung<superbill2012@qq.com>
 
 RUN \
