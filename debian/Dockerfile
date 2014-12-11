@@ -1,11 +1,10 @@
 # Pull base image.
 FROM debian:wheezy
 
-# 163 sources.list
-# ADD sources.list.wheezy /etc/apt/sources.list
+# sources.list
+ADD sources.list.wheezy /etc/apt/sources.list
 
-RUN apt-get update && \
-	apt-get upgrade -y && \
-	apt-get install -y  unzip wget python2.7
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y unzip wget vim
 	
 CMD ["bash"]
