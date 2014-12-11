@@ -5,8 +5,8 @@ ENV VERSION v0.10.31
 RUN \
 	mkdir -p /opt/nodejs && \
     wget -O - "http://www.nodejs.org/dist/${VERSION}/node-${VERSION}-linux-x64.tar.gz" | tar --strip-components=1 -C /opt/nodejs -x -z
-
-RUN \
-	apt-get update && \
-	apt-get install -y imagemagick && \
-    apt-get clean
+RUN apt-get update && \
+	apt-get upgrade -y && \
+	apt-get install -y  python2.7 && \
+	apt-get clean
+RUN npm install -g node-inspector
